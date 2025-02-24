@@ -2331,6 +2331,8 @@ MonoBehaviour:
   flight_code: {fileID: 230744851}
   airport_name: {fileID: 1482607537}
   city: {fileID: 203494377}
+  left_button: {fileID: 947510389}
+  right_button: {fileID: 351717991}
   current: 0
 --- !u!4 &1868362569
 Transform:

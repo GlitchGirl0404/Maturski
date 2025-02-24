@@ -18,12 +18,29 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI flight_code;
     [SerializeField] TextMeshProUGUI airport_name;
     [SerializeField] TextMeshProUGUI city;
+    [SerializeField] GameObject left_button;
+    [SerializeField] GameObject right_button;
     public int current = 0;
     public void DisplayNames()
     {
         flight_code.text = nivoi[current].flight_code;
         city.text = nivoi[current].city;
         airport_name.text = nivoi[current].airport;
+        if (current == 0)
+        {
+            left_button.SetActive(false);
+            right_button.SetActive(true);
+        }
+        else if (current == nivoi.Length - 1)
+        {
+            left_button.SetActive(true);
+            right_button.SetActive(false);
+        }
+        else
+        {
+            left_button.SetActive(true);
+            right_button.SetActive(true);
+        }
     }
     void Start()
     {
