@@ -44,10 +44,10 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        nivoi[0] = new Nivo("V3CUHY", "Belgrade", "Nikola Tesla");
-        nivoi[1] = new Nivo("QL6PLM", "Murcia", "Región de Murcia International Airport");
-        nivoi[2] = new Nivo("2P6GYI", "Basel", "EuroAirport Basel Mulhouse Freiburg");
-        nivoi[3] = new Nivo("M478AT", "Free Play", "######");
+        nivoi[0] = new Nivo("M478AT", "Free Play", "######");
+        nivoi[1] = new Nivo("V3CUHY", "Belgrade", "Nikola Tesla");
+        nivoi[2] = new Nivo("QL6PLM", "Murcia", "Región de Murcia International Airport");
+        nivoi[3] = new Nivo("2P6GYI", "Basel", "EuroAirport Basel Mulhouse Freiburg");
         DisplayNames();
     }
 }

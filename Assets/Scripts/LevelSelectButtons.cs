@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UIElements;
 using System;
+using UnityEngine.SceneManagement;
 public class LevelSelectButtons : MonoBehaviour
 {
     GameManager game_manager;
@@ -29,6 +30,6 @@ public class LevelSelectButtons : MonoBehaviour
     }
     public void Play()
     {
-
+        SceneManager.LoadScene("Lopov");
     }
 }
