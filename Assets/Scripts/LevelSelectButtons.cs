@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UIElements;
 using System;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 public class LevelSelectButtons : MonoBehaviour
 {
     GameManager game_manager;
@@ -30,14 +31,6 @@ public class LevelSelectButtons : MonoBehaviour
     }
     public void Play()
     {
-        int[,] matrica = new int[7,7];
-        for (int i = 0; i < 7; i++)
-        {
-            for (int j = 0; j < 7; j++)
-            {
-                matrica[i,j] = 0;
-            }
-        }
         SceneManager.LoadScene("Lopov");
     }
 }
