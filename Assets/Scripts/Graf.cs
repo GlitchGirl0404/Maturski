@@ -15,7 +15,7 @@ public class Graf
         this.cvorovi = cvorovi;
         this.matrica_povezanosti = matrica_povezanosti;
     }
-    public List<int> Dajkstra()
+    public DajkstraReturn Dajkstra()
     {
         int[] udaljenosti = new int[broj_cvorova];
         udaljenosti[0] = 0;
@@ -57,6 +57,7 @@ public class Graf
                 }
             }
         }
-        return put[broj_cvorova - 1];
+        DajkstraReturn rezultat = new DajkstraReturn(udaljenosti[broj_cvorova - 1], put[broj_cvorova - 1]);
+        return rezultat;
     }
 }

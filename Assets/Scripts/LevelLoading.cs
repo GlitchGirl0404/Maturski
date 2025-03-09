@@ -12,5 +12,7 @@ public static class LevelLoading
     public static List<int> vrednost_predmeta;
     public static int max_vrednost;
     public static int ukradena_vrednost;
-
+    public static Graf graf;
+    public static DajkstraReturn najbrzi;
+    public static DajkstraReturn trenutni;
 }
