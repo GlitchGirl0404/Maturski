@@ -17,4 +17,24 @@ public static class Funkcije
         }
         return max[kuce.Length];
     }
+    public static int Ranac(int nosivost, int[] tezine)
+    {
+        int[] dobijeni = new int[nosivost + 1];
+        for (int i = 1;  i < nosivost + 1; i++)
+        {
+            dobijeni[i] = 0;
+        }
+        dobijeni[0] = -1;
+        for (int i = 0; i < tezine.Length; i++)
+        {
+            for (int j = nosivost; i > -1; j--)
+            {
+                if ((dobijeni[j] != 0) && (j + tezine[i] <= nosivost))
+                {
+                    dobijeni[j + tezine[i]] = i + 1;
+                }
+            }
+        }
+        return 0;
+    }
 }
