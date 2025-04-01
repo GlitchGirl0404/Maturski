@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 public static class Funkcije
 {
-    public static DajkstraReturn Lopov(int[] kuce)
+    public static ReturnClass Lopov(int[] kuce)
     {
         int n = kuce.Length;
         int[] sa = new int[n];
@@ -25,9 +25,9 @@ public static class Funkcije
                 b = b - kuce[i];
             }
         }
-        return new DajkstraReturn(Mathf.Max(sa[n - 1], bez[n - 1]), s);
+        return new ReturnClass(Mathf.Max(sa[n - 1], bez[n - 1]), s);
     }
-    public static DajkstraReturn Ranac(int nosivost, int[] tezine, int[] vrednost)
+    public static ReturnClass Ranac(int nosivost, int[] tezine, int[] vrednost)
     {
         int[] dobijeni = new int[nosivost + 1];
         int[] vrednosti = new int[nosivost + 1];
@@ -68,6 +68,6 @@ public static class Funkcije
             lista.Add(dobijeni[poz] - 1);
             poz = poz - tezine[dobijeni[poz] - 1];
         }
-        return new DajkstraReturn(max, lista); ;
+        return new ReturnClass(max, lista); ;
     }
 }
