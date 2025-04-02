@@ -612,6 +612,7 @@ GameObject:
   - component: {fileID: 1630297493}
   - component: {fileID: 1630297492}
   - component: {fileID: 1630297491}
+  - component: {fileID: 1630297494}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -682,7 +683,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1630297492}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1630297494}
+        m_TargetAssemblyTypeName: LopovButtons, Assembly-CSharp
+        m_MethodName: Left
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1630297492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,6 +734,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630297489}
   m_CullTransparentMesh: 1
+--- !u!114 &1630297494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630297489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ce10415adad8b42803416842e56884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1939394081}
 --- !u!1 &1720046886
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +895,7 @@ GameObject:
   - component: {fileID: 1759775345}
   - component: {fileID: 1759775344}
   - component: {fileID: 1759775343}
+  - component: {fileID: 1759775346}
   m_Layer: 5
   m_Name: Right
   m_TagString: Untagged
@@ -939,7 +966,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1759775344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759775346}
+        m_TargetAssemblyTypeName: LopovButtons, Assembly-CSharp
+        m_MethodName: Right
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1759775344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,6 +1017,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759775341}
   m_CullTransparentMesh: 1
+--- !u!114 &1759775346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759775341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ce10415adad8b42803416842e56884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1939394081}
 --- !u!1 &1939394081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1233,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 32.93, y: 4.94}
+  m_Size: {x: 10, y: 4.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1246,6 +1298,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4dacd8329730b4481563c05a904103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kuce: []
+  kuca_prefab: {fileID: 8784106873901682190, guid: 03255f949b944e94ab378c71036da3ee, type: 3}
+  background: {fileID: 2010460706}
+  left_button: {fileID: 1630297489}
+  right_button: {fileID: 1759775341}
+  camera: {fileID: 1939394081}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
