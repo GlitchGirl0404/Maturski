@@ -32,15 +32,11 @@ public class LevelSelectButtons : MonoBehaviour
     }
     public void Play()
     {
-        LevelLoading.broj_kuca = 7;
-        LevelLoading.vrednosti_kuca = new int[7];
+        LevelLoading.broj_kuca = 3;
+        LevelLoading.vrednosti_kuca = new int[3];
         LevelLoading.vrednosti_kuca[0] = 19;
         LevelLoading.vrednosti_kuca[1] = 43;
         LevelLoading.vrednosti_kuca[2] = 2;
-        LevelLoading.vrednosti_kuca[3] = 19;
-        LevelLoading.vrednosti_kuca[4] = 43;
-        LevelLoading.vrednosti_kuca[5] = 2;
-        LevelLoading.vrednosti_kuca[6] = 19;
         SceneManager.LoadScene("Lopov");
     }
 }
