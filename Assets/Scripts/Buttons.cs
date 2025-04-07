@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
@@ -8,7 +9,7 @@ public class Buttons : MonoBehaviour
     }
     public void Settings()
     {
-
+        Application.OpenURL("file:///" + Application.dataPath + "\\Maturski.pdf");
     }
     public void Exit()
     {
