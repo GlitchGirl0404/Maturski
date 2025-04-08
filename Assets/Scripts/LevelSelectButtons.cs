@@ -39,4 +39,8 @@ public class LevelSelectButtons : MonoBehaviour
         LevelLoading.vrednosti_kuca[2] = 2;
         SceneManager.LoadScene("Lopov");
     }
+    public void Back()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }
