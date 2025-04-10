@@ -14,9 +14,11 @@ public class LopovManager : MonoBehaviour
     [SerializeField] GameObject camera;
     [SerializeField] GameObject black_screen;
     [SerializeField] GameObject overlay;
+    [SerializeField] GameObject your_result_txt;
+    [SerializeField] GameObject best_result_txt;
+    public bool[] selected;
     int min = 0;
     int max = LevelLoading.broj_kuca * 4 - 10;
-    public bool[] selected;
     void Start()
     {
         kuce = new GameObject[LevelLoading.broj_kuca];
@@ -30,9 +32,6 @@ public class LopovManager : MonoBehaviour
             selected[i] = false;
         }
         background.GetComponent<SpriteRenderer>().size = new Vector2(LevelLoading.broj_kuca * 4, 4.94f);
-    }
-    void Update()
-    {
         if (camera.transform.position.x <= min)
         {
             left_button.SetActive(false);
@@ -76,6 +75,8 @@ public class LopovManager : MonoBehaviour
     }
     public void EndLevel()
     {
+        left_button.SetActive(false);
+        right_button.SetActive(false);
         ReturnClass res = Funkcije.Lopov(LevelLoading.vrednosti_kuca);
         LevelLoading.max_lopov = res;
         black_screen.SetActive(true);
@@ -89,5 +90,7 @@ public class LopovManager : MonoBehaviour
             }
         }
         LevelLoading.ukradeno_lopov = sum;
+        your_result_txt.GetComponent<TextMeshProUGUI>().text = sum.ToString();
+        best_result_txt.GetComponent<TextMeshProUGUI>().text = res.razdaljina.ToString();
     }
 }
