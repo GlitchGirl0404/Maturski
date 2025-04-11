@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ranac.unity
     guid: 9e52fedce75089e4cb3568d210fdafaa
+  - enabled: 1
+    path: Assets/Scenes/Dajkstra.unity
+    guid: d3b4af473a5d607408fc084deb6244f9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
