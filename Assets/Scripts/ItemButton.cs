@@ -19,7 +19,17 @@ public class ItemButton : MonoBehaviour
                 break;
             }
         }
-        rm.selected[n] = true;
+        if (rm.selected[n])
+        {
+            rm.selected[n] = false;
+        }
+        else
+        {
+            if (rm.tezina + LevelLoading.tezina_predmeta[n] <= LevelLoading.nosivost_ranca)
+            {
+                rm.selected[n] = true;
+            }
+        }
         rm.UpdateBar();
         rm.OrderItems();
     }
