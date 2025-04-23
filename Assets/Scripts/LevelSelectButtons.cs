@@ -32,24 +32,13 @@ public class LevelSelectButtons : MonoBehaviour
     }
     public void Play()
     {
-        LevelLoading.broj_kuca = 3;
-        LevelLoading.vrednosti_kuca = new int[3];
-        LevelLoading.vrednosti_kuca[0] = 19;
-        LevelLoading.vrednosti_kuca[1] = 43;
-        LevelLoading.vrednosti_kuca[2] = 2;
-        LevelLoading.nosivost_ranca = 9;
-        LevelLoading.tezina_predmeta = new int[5];
-        LevelLoading.tezina_predmeta[0] = 4;
-        LevelLoading.tezina_predmeta[1] = 1;
-        LevelLoading.tezina_predmeta[2] = 6;
-        LevelLoading.tezina_predmeta[3] = 1;
-        LevelLoading.tezina_predmeta[4] = 6;
-        LevelLoading.vrednost_predmeta = new int[5];
-        LevelLoading.vrednost_predmeta[0] = 5;
-        LevelLoading.vrednost_predmeta[1] = 6;
-        LevelLoading.vrednost_predmeta[2] = 6;
-        LevelLoading.vrednost_predmeta[3] = 6;
-        LevelLoading.vrednost_predmeta[4] = 6;
+        LevelLoading.level_id = game_manager.current;
+        LevelLoading.broj_kuca = game_manager.nivoi[game_manager.current].broj_kuca;
+        LevelLoading.vrednosti_kuca = game_manager.nivoi[game_manager.current].vrednosti_kuca;
+        LevelLoading.nosivost_ranca = game_manager.nivoi[game_manager.current].nosivost_ranca;
+        LevelLoading.tezina_predmeta = game_manager.nivoi[game_manager.current].tezina_predmeta;
+        LevelLoading.vrednost_predmeta = game_manager.nivoi[game_manager.current].vrednost_predmeta;
+        LevelLoading.graf = game_manager.nivoi[game_manager.current].graf;
         SceneManager.LoadScene("Lopov");
     }
     public void Back()

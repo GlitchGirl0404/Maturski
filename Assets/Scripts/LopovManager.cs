@@ -19,6 +19,7 @@ public class LopovManager : MonoBehaviour
     public bool[] selected;
     int min = 0;
     int max = LevelLoading.broj_kuca * 4 - 10;
+    [SerializeField] GameObject value_txt;
     void Start()
     {
         kuce = new GameObject[LevelLoading.broj_kuca];
@@ -48,9 +49,11 @@ public class LopovManager : MonoBehaviour
         {
             right_button.SetActive(true);
         }
+        value_txt.GetComponent<TextMeshProUGUI>().text = "0";
     }
     public void KuceUpdate()
     {
+        int value = 0;
         for (int i = 0; i < kuce.Length; i++)
         {
             if (selected[i])
@@ -64,6 +67,7 @@ public class LopovManager : MonoBehaviour
                 {
                     kuce[i + 1].transform.Find("Canvas").gameObject.transform.Find("HouseButton").gameObject.SetActive(false);
                 }
+                value = value + LevelLoading.vrednosti_kuca[i];
                 i++;
             }
             else
@@ -72,11 +76,13 @@ public class LopovManager : MonoBehaviour
                 kuce[i].transform.Find("Canvas").gameObject.transform.Find("HouseButton").gameObject.SetActive(true);
             }
         }
+        value_txt.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
     public void EndLevel()
     {
         left_button.SetActive(false);
         right_button.SetActive(false);
+        value_txt.SetActive(false);
         ReturnClass res = Funkcije.Lopov(LevelLoading.vrednosti_kuca);
         LevelLoading.max_lopov = res;
         black_screen.SetActive(true);

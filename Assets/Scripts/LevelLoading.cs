@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 public static class LevelLoading
 {
+    public static int level_id;
     public static int broj_kuca;
     public static int[] vrednosti_kuca;
     public static ReturnClass max_lopov;
