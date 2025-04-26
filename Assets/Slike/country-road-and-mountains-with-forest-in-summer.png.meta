@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      country-road-and-mountains-with-forest-in-summer_0: 3891770283116601105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

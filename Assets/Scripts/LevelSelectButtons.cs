@@ -1,11 +1,5 @@
-using TMPro;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UIElements;
-using System;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using System.Linq;
 public class LevelSelectButtons : MonoBehaviour
 {
     GameManager game_manager;

@@ -1,9 +1,6 @@
-using System;
 using UnityEngine;
 using TMPro;
-using System.Drawing;
 using UnityEngine.UI;
-using JetBrains.Annotations;
 public class LopovManager : MonoBehaviour
 {
     public GameObject[] kuce;

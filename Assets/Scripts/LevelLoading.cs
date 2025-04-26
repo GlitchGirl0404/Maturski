@@ -1,6 +1,3 @@
-using NUnit.Framework;
-using UnityEngine;
-using System.Collections.Generic;
 public static class LevelLoading
 {
     public static int level_id;
