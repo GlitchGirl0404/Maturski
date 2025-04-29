@@ -16,6 +16,7 @@ public class RanacManager : MonoBehaviour
     [SerializeField] GameObject ukradeno_txt;
     [SerializeField] GameObject max_txt;
     [SerializeField] GameObject empty;
+    [SerializeField] GameObject muzej_txt;
     public void UpdateBar()
     {
         tezina = 0;
@@ -50,6 +51,7 @@ public class RanacManager : MonoBehaviour
             items[i].GetComponent<ItemButton>().ranac_manager = gameObject;
         }
         OrderItems();
+        muzej_txt.GetComponent<TextMeshProUGUI>().text = LevelLoading.muzej;
     }
     public void OrderItems()
     {

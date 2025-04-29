@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
         public string flight_code;
         public string city;
         public string airport;
+        public string muzej;
         public bool[] stars;
         public int to_unlock;
         public int broj_kuca;
@@ -16,11 +17,12 @@ public class GameManager : MonoBehaviour
         public int[] tezina_predmeta;
         public int[] vrednost_predmeta;
         public Graf graf;
-        public Nivo(string flightCode, string city, string airport, bool[] stars, int to_unlock, int broj_kuca, int[] vrednosti_kuca, int nosivost_ranca, int[] tezina_predmeta, int[] vrednost_predmeta, Graf graf)
+        public Nivo(string flightCode, string city, string airport, string muzej, bool[] stars, int to_unlock, int broj_kuca, int[] vrednosti_kuca, int nosivost_ranca, int[] tezina_predmeta, int[] vrednost_predmeta, Graf graf)
         {
             this.flight_code = flightCode;
             this.city = city;
             this.airport = airport;
+            this.muzej = muzej;
             this.stars = stars;
             this.to_unlock = to_unlock;
             this.broj_kuca = broj_kuca;
@@ -166,7 +168,7 @@ public class GameManager : MonoBehaviour
         matrica_povezanosti[2, 3] = 6;
         matrica_povezanosti[3, 2] = 6;
         Graf graf = new Graf(4, cvorovi, matrica_povezanosti);
-        nivoi[0] = new Nivo("V3CUHY", "Beograd", "Nikola Tesla", level_stars, 0, 3, vrednosti_kuca, 9, tezina_predmeta, vrednosti_predmeta, graf);
+        nivoi[0] = new Nivo("V3CUHY", "Beograd", "Nikola Tesla", "Narodni muzej", level_stars, 0, 3, vrednosti_kuca, 9, tezina_predmeta, vrednosti_predmeta, graf);
         level_stars = new bool[3];
         level_stars[0] = stars[1, 0];
         level_stars[1] = stars[1, 1];
@@ -235,7 +237,7 @@ public class GameManager : MonoBehaviour
         matrica_povezanosti[4, 5] = 9;
         matrica_povezanosti[5, 4] = 9;
         graf = new Graf(6, cvorovi, matrica_povezanosti);
-        nivoi[1] = new Nivo("QL6PLM", "London", "Elstree Aerodrome", level_stars, 2, 7, vrednosti_kuca, 15, tezina_predmeta, vrednosti_predmeta, graf);
+        nivoi[1] = new Nivo("QL6PLM", "London", "Elstree Aerodrome", "The British Museum", level_stars, 2, 7, vrednosti_kuca, 15, tezina_predmeta, vrednosti_predmeta, graf);
         level_stars = new bool[3];
         level_stars[0] = stars[2, 0];
         level_stars[1] = stars[2, 1];
@@ -331,7 +333,7 @@ public class GameManager : MonoBehaviour
         matrica_povezanosti[7, 8] = 7;
         matrica_povezanosti[8, 7] = 7;
         graf = new Graf(9, cvorovi, matrica_povezanosti);
-        nivoi[2] = new Nivo("V9C9WC", "Pariz", "Charles de Gaulle Airport", level_stars, 5, 11, vrednosti_kuca, 30, tezina_predmeta, vrednosti_predmeta, graf);
+        nivoi[2] = new Nivo("V9C9WC", "Pariz", "Charles de Gaulle Airport", "Louvre", level_stars, 5, 11, vrednosti_kuca, 30, tezina_predmeta, vrednosti_predmeta, graf);
         current = 0;
         DisplayNames();
     }

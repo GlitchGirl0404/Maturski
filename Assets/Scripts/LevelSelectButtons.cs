@@ -29,6 +29,7 @@ public class LevelSelectButtons : MonoBehaviour
         LevelLoading.level_id = game_manager.current;
         LevelLoading.broj_kuca = game_manager.nivoi[game_manager.current].broj_kuca;
         LevelLoading.vrednosti_kuca = game_manager.nivoi[game_manager.current].vrednosti_kuca;
+        LevelLoading.muzej = game_manager.nivoi[game_manager.current].muzej;
         LevelLoading.nosivost_ranca = game_manager.nivoi[game_manager.current].nosivost_ranca;
         LevelLoading.tezina_predmeta = game_manager.nivoi[game_manager.current].tezina_predmeta;
         LevelLoading.vrednost_predmeta = game_manager.nivoi[game_manager.current].vrednost_predmeta;

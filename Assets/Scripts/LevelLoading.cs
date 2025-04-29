@@ -5,6 +5,7 @@ public static class LevelLoading
     public static int[] vrednosti_kuca;
     public static ReturnClass max_lopov;
     public static int ukradeno_lopov;
+    public static string muzej;
     public static int nosivost_ranca;
     public static int[] tezina_predmeta;
     public static int[] vrednost_predmeta;
