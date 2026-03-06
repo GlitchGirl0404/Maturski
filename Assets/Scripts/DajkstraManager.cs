@@ -38,8 +38,8 @@ public class DajkstraManager : MonoBehaviour
                     grane[i, j].transform.SetParent(panel.transform, false);
                     duzina_txt.transform.SetParent(panel.transform, false);
                     duzina_txt.GetComponent<TextMeshProUGUI>().text = LevelLoading.graf.matrica_povezanosti[i, j].ToString();
-                    grane[i, j].transform.position = new Vector3((LevelLoading.graf.cvorovi[i].x + LevelLoading.graf.cvorovi[j].x) / 2, (LevelLoading.graf.cvorovi[i].y + LevelLoading.graf.cvorovi[j].y) / 2) + new Vector3(panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.width / 2, panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.height / 2);
-                    duzina_txt.transform.position = new Vector3((LevelLoading.graf.cvorovi[i].x + LevelLoading.graf.cvorovi[j].x) / 2, (LevelLoading.graf.cvorovi[i].y + LevelLoading.graf.cvorovi[j].y) / 2) + new Vector3(panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.width / 2, panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.height / 2);
+                    grane[i, j].GetComponent<RectTransform>().anchoredPosition = new Vector3((LevelLoading.graf.cvorovi[i].x + LevelLoading.graf.cvorovi[j].x) / 2, (LevelLoading.graf.cvorovi[i].y + LevelLoading.graf.cvorovi[j].y) / 2) + new Vector3(panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.width / 2, panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.height / 2);
+                    duzina_txt.GetComponent<RectTransform>().anchoredPosition = new Vector3((LevelLoading.graf.cvorovi[i].x + LevelLoading.graf.cvorovi[j].x) / 2, (LevelLoading.graf.cvorovi[i].y + LevelLoading.graf.cvorovi[j].y) / 2) + new Vector3(panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.width / 2, panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.height / 2);
                     grane[i, j].GetComponent<RectTransform>().sizeDelta = new Vector3(25, Mathf.Sqrt((LevelLoading.graf.cvorovi[i].x - LevelLoading.graf.cvorovi[j].x) * (LevelLoading.graf.cvorovi[i].x - LevelLoading.graf.cvorovi[j].x) + (LevelLoading.graf.cvorovi[i].y - LevelLoading.graf.cvorovi[j].y) * (LevelLoading.graf.cvorovi[i].y - LevelLoading.graf.cvorovi[j].y)));
                     grane[i, j].transform.Find("Selected").gameObject.GetComponent<RectTransform>().sizeDelta = new Vector3(25, Mathf.Sqrt((LevelLoading.graf.cvorovi[i].x - LevelLoading.graf.cvorovi[j].x) * (LevelLoading.graf.cvorovi[i].x - LevelLoading.graf.cvorovi[j].x) + (LevelLoading.graf.cvorovi[i].y - LevelLoading.graf.cvorovi[j].y) * (LevelLoading.graf.cvorovi[i].y - LevelLoading.graf.cvorovi[j].y)));
                     grane[i, j].transform.eulerAngles = new Vector3(0, 0, (Mathf.Atan((LevelLoading.graf.cvorovi[j].x - LevelLoading.graf.cvorovi[i].x) / (LevelLoading.graf.cvorovi[i].y - LevelLoading.graf.cvorovi[j].y)) * 180) / Mathf.PI);
@@ -55,7 +55,7 @@ public class DajkstraManager : MonoBehaviour
             cvorovi[i] = Instantiate(cvor_prefab);
             cvorovi[i].GetComponent<CvorButton>().dajkstra_manager = gameObject;
             cvorovi[i].transform.SetParent(panel.transform, false);
-            cvorovi[i].transform.position = new Vector3(LevelLoading.graf.cvorovi[i].x, LevelLoading.graf.cvorovi[i].y) + new Vector3(panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.width / 2, panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.height / 2);
+            cvorovi[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(LevelLoading.graf.cvorovi[i].x, LevelLoading.graf.cvorovi[i].y) + new Vector3(panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.width / 2, panel.transform.parent.gameObject.GetComponent<RectTransform>().rect.height / 2);
             if (i == (broj_cvorova - 1))
             {
                 cvorovi[i].transform.Find("Avion").gameObject.SetActive(true);

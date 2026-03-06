@@ -49,6 +49,11 @@ public class RanacManager : MonoBehaviour
             items[i].transform.Find("ValueTXT").gameObject.GetComponent<TextMeshProUGUI>().text = LevelLoading.vrednost_predmeta[i].ToString();
             items[i].transform.Find("TezinaTXT").gameObject.GetComponent<TextMeshProUGUI>().text = LevelLoading.tezina_predmeta[i].ToString();
             items[i].GetComponent<ItemButton>().ranac_manager = gameObject;
+            items[i].GetComponent<RectTransform>().anchorMin = new Vector2(0, 1);
+            items[i].GetComponent<RectTransform>().anchorMax = new Vector2(0, 1);
+            Vector3 scale = items[i].transform.localScale;
+            scale.y = 200;
+            scale.y = 200;
         }
         OrderItems();
         muzej_txt.GetComponent<TextMeshProUGUI>().text = LevelLoading.muzej;
@@ -61,14 +66,16 @@ public class RanacManager : MonoBehaviour
         {
             if (selected[i])
             {
-                items[i].GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
                 items[i].GetComponent<RectTransform>().anchorMin = new Vector2(1, 1);
-                items[i].transform.position = new Vector3(-150 - ((r % 3) * 210) + 1920, -150 - (((int)Mathf.Floor(r / 3)) * 210) + 1080);
+                items[i].GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
+                items[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(-150 - ((r % 3) * 210), -150 - (((int)Mathf.Floor(r / 3)) * 210));
                 r++;
             }
             else
             {
-                items[i].transform.position = new Vector3(150 + ((l % 3) * 210), -150 - (((int)Mathf.Floor(l / 3)) * 210) + 1080);
+                items[i].GetComponent<RectTransform>().anchorMin = new Vector2(0, 1);
+                items[i].GetComponent<RectTransform>().anchorMax = new Vector2(0, 1);
+                items[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(150 + ((l % 3) * 210), -150 - (((int)Mathf.Floor(l / 3)) * 210));
                 l++;
             }
         }

@@ -145,10 +145,10 @@ public class GameManager : MonoBehaviour
         vrednosti_predmeta[3] = 6;
         vrednosti_predmeta[4] = 6;
         Cvor[] cvorovi = new Cvor[4];
-        cvorovi[0] = new Cvor(345, 255);
-        cvorovi[1] = new Cvor(-83, -231);
-        cvorovi[2] = new Cvor(-385, -156);
-        cvorovi[3] = new Cvor(-183, 230);
+        cvorovi[0] = new Cvor(-615, -285);
+        cvorovi[1] = new Cvor(-1043, -771);
+        cvorovi[2] = new Cvor(-1345, -696);
+        cvorovi[3] = new Cvor(-1143, -310);
         int[,] matrica_povezanosti = new int[4, 4];
         for (int i = 0; i < 4; i++)
         {
@@ -204,12 +204,12 @@ public class GameManager : MonoBehaviour
         vrednosti_predmeta[8] = 8;
         vrednosti_predmeta[9] = 2;
         cvorovi = new Cvor[6];
-        cvorovi[0] = new Cvor(-330, -164);
-        cvorovi[1] = new Cvor(67, -264);
-        cvorovi[2] = new Cvor(0, 0);
-        cvorovi[3] = new Cvor(572, 118);
-        cvorovi[4] = new Cvor(149, 321);
-        cvorovi[5] = new Cvor(-443, 221);
+        cvorovi[0] = new Cvor(-1290, -704);
+        cvorovi[1] = new Cvor(-893, -804);
+        cvorovi[2] = new Cvor(-960, -540);
+        cvorovi[3] = new Cvor(-388, -422);
+        cvorovi[4] = new Cvor(-811, -219);
+        cvorovi[5] = new Cvor(-1403, -319);
         matrica_povezanosti = new int[6, 6];
         for (int i = 0; i < 6; i++)
         {
@@ -287,15 +287,15 @@ public class GameManager : MonoBehaviour
         vrednosti_predmeta[13] = 12;
         vrednosti_predmeta[14] = 5;
         cvorovi = new Cvor[9];
-        cvorovi[0] = new Cvor(-621, 0);
-        cvorovi[1] = new Cvor(-317, 270);
-        cvorovi[2] = new Cvor(0, 270);
-        cvorovi[3] = new Cvor(317, 270);
-        cvorovi[4] = new Cvor(621, 0);
-        cvorovi[5] = new Cvor(317, -270);
-        cvorovi[6] = new Cvor(0, -270);
-        cvorovi[7] = new Cvor(-317, -270);
-        cvorovi[8] = new Cvor(0, 0);
+        cvorovi[0] = new Cvor(-1581, -540);
+        cvorovi[1] = new Cvor(-1277, -270);
+        cvorovi[2] = new Cvor(-960, -270);
+        cvorovi[3] = new Cvor(-643, -270);
+        cvorovi[4] = new Cvor(-318, -540);
+        cvorovi[5] = new Cvor(-643, -810);
+        cvorovi[6] = new Cvor(-960, -810);
+        cvorovi[7] = new Cvor(-1277, -810);
+        cvorovi[8] = new Cvor(-960, -540);
         matrica_povezanosti = new int[9, 9];
         for (int i = 0; i < 9; i++)
         {
